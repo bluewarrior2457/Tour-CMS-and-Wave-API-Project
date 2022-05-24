@@ -5,10 +5,10 @@
   "engines": {
     "node": "14.17.5"
   },
-  "main": "vox.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node vox.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
