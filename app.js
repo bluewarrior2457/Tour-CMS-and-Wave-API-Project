@@ -36,6 +36,7 @@ app.get("/:apiKey/:marketplaceId/:markApiKey", (req, res) => {
   TourCMS.showBooking({
     bookingId: bookingId,
     callback: function (response) {
+      console.log(response)
       let tourName = response.booking.booking_name;
       // let tourName = 'Museum visit';
 
