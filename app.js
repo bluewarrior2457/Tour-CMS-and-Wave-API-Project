@@ -36,6 +36,7 @@ app.get("/:apiKey/:marketplaceId/:markApiKey", (req, res) => {
   TourCMS.showBooking({
     bookingId: bookingId,
     callback: function (response) {
+     
       let tourName = response.booking.booking_name;
       // let tourName = 'Museum visit';
 
@@ -83,6 +84,7 @@ app.get("/:apiKey/:marketplaceId/:markApiKey", (req, res) => {
                 },
               })
                 .then((response) => {
+                  console.log(response.data)
                   slotId = response.data[0].slots[0].id;
                   let tickets = {};
                   countryCode = tour.location.country.code;
@@ -174,6 +176,7 @@ app.get("/:apiKey/:marketplaceId/:markApiKey", (req, res) => {
                             .then((responseBookingPost) => {
                               res.send(responseBookingPost.data);
                               console.log("Booking Success");
+                              console.log(responseBookingPost.data)
                             })
                             .catch((error) => {
                               console.log(error);
